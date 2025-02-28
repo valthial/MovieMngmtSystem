@@ -6,6 +6,6 @@ public class MovieDto
     public string Description { get; set; }
     public DateTime ReleaseDate { get; set; }
     public string ImageUrl { get; set; }
-    public double Rating { get; set; }
+    public decimal Rating { get; set; }
     public string TrailerUrl { get; set; }
 }

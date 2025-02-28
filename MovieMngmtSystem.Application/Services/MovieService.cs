@@ -1,6 +1,16 @@
-﻿namespace MovieMngmtSystem.Application.Services;
+﻿using Microsoft.Extensions.Logging;
+using MovieMngmtSystem.Domain.Entities;
+using MovieMngmtSystem.Domain.Interfaces.Repositories;
+using MovieMngmtSystem.Domain.Interfaces.Services;
 
-public class MovieService
+namespace MovieMngmtSystem.Application.Services;
+
+public class MovieService(IMovieRepository movieRepository,  ILogger<MovieService> logger) : IMovieService
 {
-    
+    public async Task<Movie> CreateMovieAsync(Movie movie)
+    {
+        await movieRepository.CreateMovieAsync(movie);
+        logger.LogInformation("Movie has been created with ID: {Movie}", movie.Id);
+        return movie;
+    }
 }

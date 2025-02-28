@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  moviemngmtsystem.api:
+    image: ${DOCKER_REGISTRY-}moviemngmtsystemapi
+    container_name: moviemngmtsystem.api
+    build:
+      context: .
+      dockerfile: MovieMngmtSystem.Api/Dockerfile
+    ports:
+    - "5000:5000"
+    - "5001:5001"
+  moviemngmtsystem.db:
+    image: postgres
+    container_name: moviemngmtsystem.db
+    environment:
+      POSTGRES_DB: moviemngmtsystem
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./.containers/moviemngmtsystem-db:/var/lib/postgresql/data
+    ports:
+      - "5431:5432"

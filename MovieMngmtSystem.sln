@@ -1,5 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMngmtSystem.Api", "MovieMngmtSystem.Api\MovieMngmtSystem.Api.csproj", "{7038A92A-93E0-4FD2-BCC9-40947FD61335}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMngmtSystem.Application", "MovieMngmtSystem.Application\MovieMngmtSystem.Application.csproj", "{8CB6221A-9B53-4FC8-BEEE-0AEFDF10E8A1}"
@@ -9,6 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMngmtSystem.Domain", "MovieMngmtSystem.Domain\MovieMngmtSystem.Domain.csproj", "{53418E09-7B46-40EE-B7EA-5034556FD114}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMngmtSystem.UnitTests", "MovieMngmtSystem.UnitTests\MovieMngmtSystem.UnitTests.csproj", "{3A8E0559-A9D7-461C-A7D0-99F42903C653}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{31B51C3C-6130-4B2B-8D9F-86E6589D43FB}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{56E1BAFA-8717-4700-9CA1-E77D8CB1FF9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,5 +43,12 @@ Global
 		{3A8E0559-A9D7-461C-A7D0-99F42903C653}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A8E0559-A9D7-461C-A7D0-99F42903C653}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A8E0559-A9D7-461C-A7D0-99F42903C653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E1BAFA-8717-4700-9CA1-E77D8CB1FF9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E1BAFA-8717-4700-9CA1-E77D8CB1FF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E1BAFA-8717-4700-9CA1-E77D8CB1FF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E1BAFA-8717-4700-9CA1-E77D8CB1FF9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

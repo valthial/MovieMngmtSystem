@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /.containers/db
 /.idea/.idea.MovieMngmtSystem/.idea
+/.containers
