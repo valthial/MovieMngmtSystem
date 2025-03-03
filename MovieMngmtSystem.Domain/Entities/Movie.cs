@@ -10,8 +10,8 @@ public sealed class Movie
     public string ImageUrl { get; private set; }
     public decimal Rating { get; private set; }
     public string TrailerUrl { get; private set; }
-    public bool IsDeleted { get; set; }
-    public DateTimeOffset? DeletedAt { get; set; }
+    public bool IsDeleted { get; private set; }
+    public DateTimeOffset? DeletedAt { get; private set; }
 
     public static Movie? Create(string title, string description, DateTimeOffset releaseDate, string imageUrl, decimal rating, string trailerUrl)
     {

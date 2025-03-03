@@ -1,4 +1,7 @@
-﻿namespace MovieMngmtSystem.Api.DTOs;
+﻿using System.ComponentModel;
+using Newtonsoft.Json;
+
+namespace MovieMngmtSystem.Api.DTOs;
 
 public class MovieDto
 {
@@ -8,6 +11,10 @@ public class MovieDto
     public string ImageUrl { get; set; }
     public decimal Rating { get; set; }
     public string TrailerUrl { get; set; }
-    public bool IsDeleted { get; set; }
-    public DateTimeOffset? DeletedAt { get; set; }
+    
+    [DefaultValue(false)]
+    public bool IsDeleted { get; set; } = false;
+    
+    [DefaultValue(null)]
+    public DateTimeOffset? DeletedAt { get; set; } = null;
 }
