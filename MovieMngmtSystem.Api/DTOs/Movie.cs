@@ -8,4 +8,6 @@ public class MovieDto
     public string ImageUrl { get; set; }
     public decimal Rating { get; set; }
     public string TrailerUrl { get; set; }
+    public bool IsDeleted { get; set; }
+    public DateTimeOffset? DeletedAt { get; set; }
 }

@@ -22,4 +22,9 @@ public class MovieRepository(ApplicationDbContext context) : IMovieRepository
     {
         return await context.Movies.ToListAsync();
     }
+    public async Task UpdateMovieAsync(Movie movie)
+    {
+        context.Movies.Update(movie);
+        await context.SaveChangesAsync();
+    }
 }

@@ -23,4 +23,8 @@ public class MovieService(IMovieRepository movieRepository,  ILogger<MovieServic
     {
         return await movieRepository.GetAllMoviesAsync();
     }
+    public async Task UpdateMovieAsync(Movie movie)
+    {
+        await movieRepository.UpdateMovieAsync(movie);
+    }
 }
