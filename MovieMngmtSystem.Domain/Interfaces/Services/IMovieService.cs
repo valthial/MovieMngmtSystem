@@ -4,5 +4,7 @@ namespace MovieMngmtSystem.Domain.Interfaces.Services;
 
 public interface IMovieService
 {
-    Task<Movie> CreateMovieAsync(Movie movie);
+    Task<Movie?> AddMovieAsync(Movie? movie);
+    Task<Movie?> GetMovieByIdAsync(int movieId);
+    Task<IEnumerable<Movie?>> GetAllMoviesAsync();
 }

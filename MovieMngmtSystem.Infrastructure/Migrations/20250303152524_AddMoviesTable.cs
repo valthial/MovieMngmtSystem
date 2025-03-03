@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MovieMngmtSystem.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class addDB : Migration
+    public partial class AddMoviesTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -7,10 +7,20 @@ namespace MovieMngmtSystem.Application.Services;
 
 public class MovieService(IMovieRepository movieRepository,  ILogger<MovieService> logger) : IMovieService
 {
-    public async Task<Movie> CreateMovieAsync(Movie movie)
+    public async Task<Movie?> AddMovieAsync(Movie? movie)
     {
         await movieRepository.CreateMovieAsync(movie);
         logger.LogInformation("Movie has been created with ID: {Movie}", movie.Id);
         return movie;
+    }
+
+    public async Task<Movie?> GetMovieByIdAsync(int movieId)
+    {
+        return await movieRepository.GetMovieByIdAsync(movieId);
+    }
+
+    public async Task<IEnumerable<Movie?>> GetAllMoviesAsync()
+    {
+        return await movieRepository.GetAllMoviesAsync();
     }
 }

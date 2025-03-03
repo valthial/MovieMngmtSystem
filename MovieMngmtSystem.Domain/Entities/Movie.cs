@@ -11,7 +11,7 @@ public sealed class Movie
     public decimal Rating { get; private set; }
     public string TrailerUrl { get; private set; }
 
-    public static Movie Create(string title, string description, DateTimeOffset releaseDate, string imageUrl, decimal rating, string trailerUrl)
+    public static Movie? Create(string title, string description, DateTimeOffset releaseDate, string imageUrl, decimal rating, string trailerUrl)
     {
         return new Movie()
         {

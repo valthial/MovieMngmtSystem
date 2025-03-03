@@ -3,7 +3,7 @@ version: "3.9"
 services:
   moviemngmtsystem.api:
     build:
-      context: "C:\\Users\\valk\\Documents\\GitHub\\MovieMngmtSystem"
+      context: "D:\\Programming\\repos\\MovieMngmtSystem"
       dockerfile: "MovieMngmtSystem.Api/Dockerfile"
       target: "base"
     command: []
@@ -15,7 +15,7 @@ services:
     image: "moviemngmtsystemapi:dev"
     ports: []
     volumes:
-    - "C:\\Users\\valk\\Documents\\GitHub\\MovieMngmtSystem\\MovieMngmtSystem.Api:/app:rw"
-    - "C:\\Users\\valk\\Documents\\GitHub\\MovieMngmtSystem:/src:rw"
-    - "C:\\Users\\valk\\.nuget\\packages:/home/app/.nuget/packages"
+    - "C:\\Users\\val\\.nuget\\packages:/home/app/.nuget/packages"
+    - "D:\\Programming\\repos\\MovieMngmtSystem\\MovieMngmtSystem.Api:/app:rw"
+    - "D:\\Programming\\repos\\MovieMngmtSystem:/src:rw"
     working_dir: "/app"
