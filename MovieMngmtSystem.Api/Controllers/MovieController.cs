@@ -23,6 +23,8 @@ public class MoviesController(IMovieService movieService) : ControllerBase
     public async Task<ActionResult<MovieDto>> GetMovieByIdAsync(int id)
     {
         var movie = await movieService.GetMovieByIdAsync(id);
+        if (movie == null) return NotFound();
+        
         return Ok(movie);
     }
 
@@ -31,7 +33,8 @@ public class MoviesController(IMovieService movieService) : ControllerBase
     {
         var movies = await movieService.GetAllMoviesAsync();
         if (!movies.Any()) return NotFound();
-        return Ok(movies.Select(m => new MovieDto
+
+        var movieDtos = movies.Select(m => new MovieDto
         {
             Title = m.Title,
             Description = m.Description,
@@ -41,7 +44,9 @@ public class MoviesController(IMovieService movieService) : ControllerBase
             Rating = m.Rating,
             IsDeleted = m.IsDeleted,
             DeletedAt = m.DeletedAt
-        }));
+        }).ToList();
+
+        return Ok(movieDtos);
     }
     
     [HttpPut("{id}")]
