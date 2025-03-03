@@ -13,4 +13,16 @@
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Front\movie-mngmt-system\app\components\navigation\" />
+    <Folder Include="Front\movie-mngmt-system\app\components\pages\" />
+    <Folder Include="Front\movie-mngmt-system\app\components\tables\" />
+    <Folder Include="Front\movie-mngmt-system\app\models\" />
+    <Folder Include="Front\movie-mngmt-system\app\providers\" />
+    <Folder Include="Front\movie-mngmt-system\app\repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Front\movie-mngmt-system\app\react-router.config.ts" />
+    <TypeScriptCompile Include="Front\movie-mngmt-system\app\root.tsx" />
+  </ItemGroup>
 </Project>
