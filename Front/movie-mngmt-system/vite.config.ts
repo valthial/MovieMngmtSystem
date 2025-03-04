@@ -1,34 +1,25 @@
-import { reactRouter } from "@react-router/dev/vite";
-import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
+import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
+import { reactRouter } from '@react-router/dev/vite';
 
 export default defineConfig({
   plugins: [
     tailwindcss(),
     reactRouter(),
-    tsconfigPaths()
+    tsconfigPaths(),
   ],
   server: {
+    port: 3000,
     proxy: {
-      '^/api/.*': {
-        // target: process.env.API_URL,
-        target: "http://jsonplaceholder.typicode.com",
+      '/api': {
+        target: 'http://localhost:5000',
         changeOrigin: true,
-        configure(proxy) {
-          proxy.on("error", (err, _, __) => {
-            console.error(err)
-          })
-
-          proxy.on('proxyReq', (_, req, _res) => {
-            console.log("Proxing equest to:", `[${req.method}]`, req.url);
-          });
-          proxy.on('proxyRes', (proxyRes, req, _res) => {
-            console.log('Received response from:', proxyRes.statusCode, req.url);
-          });
-        },
-        rewrite: (path) => path.replace(/\/api/, ''),
-      }
-    }
-  }
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
+  },
+  preview: {
+    port: 3000,
+  },
 });

@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export const useMoviesApi = () => {
     const [isExecuting, setIsExecuting] = useState<boolean>(false);
-
+    const API_BASE_URL = import.meta.env.VITE_API_URL;
     const addMovie = async (formData: FormData) => {
         try {
             setIsExecuting(true);
@@ -11,7 +11,7 @@ export const useMoviesApi = () => {
                 data,
                 status,
                 statusText
-            } = await axios.postForm("/api/movie/add",
+            } = await axios.postForm(`${API_BASE_URL}/api/movie/create`,
                 formData,
                 {
                     timeout: 3000

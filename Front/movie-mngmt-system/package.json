@@ -1,5 +1,5 @@
 {
-  "name": "movies-headless-crud",
+  "name": "movie-mngmt-system",
   "private": true,
   "type": "module",
   "scripts": {
