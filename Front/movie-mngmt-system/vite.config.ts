@@ -12,7 +12,8 @@ export default defineConfig({
   server: {
     proxy: {
       '^/api/.*': {
-        target: process.env.API_URL,
+        // target: process.env.API_URL,
+        target: "http://jsonplaceholder.typicode.com",
         changeOrigin: true,
         configure(proxy) {
           proxy.on("error", (err, _, __) => {

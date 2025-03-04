@@ -15,14 +15,26 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Front\movie-mngmt-system\app\components\navigation\" />
-    <Folder Include="Front\movie-mngmt-system\app\components\pages\" />
     <Folder Include="Front\movie-mngmt-system\app\components\tables\" />
     <Folder Include="Front\movie-mngmt-system\app\models\" />
-    <Folder Include="Front\movie-mngmt-system\app\providers\" />
     <Folder Include="Front\movie-mngmt-system\app\repositories\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Front\movie-mngmt-system\app\react-router.config.ts" />
+    <TypeScriptCompile Include="Front\movie-mngmt-system\app\components\pages\add-page.tsx" />
+    <TypeScriptCompile Include="Front\movie-mngmt-system\app\components\pages\movie-details-page.tsx" />
+    <TypeScriptCompile Include="Front\movie-mngmt-system\app\entry.client.tsx" />
+    <TypeScriptCompile Include="Front\movie-mngmt-system\app\entry.server.tsx" />
+    <TypeScriptCompile Include="Front\movie-mngmt-system\app\hooks\useMoviesApi.ts" />
+    <TypeScriptCompile Include="Front\movie-mngmt-system\app\providers\providers.tsx" />
     <TypeScriptCompile Include="Front\movie-mngmt-system\app\root.tsx" />
+    <TypeScriptCompile Include="Front\movie-mngmt-system\react-router.config.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Front\movie-mngmt-system\.dockerignore" />
+    <Content Include="Front\movie-mngmt-system\.env.local" />
+    <Content Include="Front\movie-mngmt-system\.gitattributes" />
+    <Content Include="Front\movie-mngmt-system\Dockerfile" />
+    <Content Include="Front\movie-mngmt-system\pnpm-lock.yaml" />
+    <Content Include="Front\movie-mngmt-system\README.md" />
   </ItemGroup>
 </Project>

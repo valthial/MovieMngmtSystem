@@ -1,8 +1,8 @@
 import { IndexPage } from "~/components/pages/index-page.js";
 import type { Route } from "./+types/_index";
 import { getMovies } from "~/repositories/api";
+import type { MovieDto } from "~/models/post";
 import { MovieLoader } from "~/components/loaders/movies-loader";
-import type { MovieDto } from "~/models/movie";
 
 export async function clientLoader({ }: Route.ClientLoaderArgs) {
   const movies = await getMovies();
@@ -14,14 +14,14 @@ export function HydrateFallback() {
 }
 
 export default function Home(
-  {
-    loaderData
-  }: {
-    loaderData: Route.ClientLoaderArgs
-  }) {
+    {
+      loaderData
+    }: {
+      loaderData: Route.ClientLoaderArgs
+    }) {
   console.dir(loaderData);
   const movies = (loaderData as unknown) as MovieDto[];
   return (
-    <IndexPage movies={movies} />
+      <IndexPage movies={movies} />
   );
 }

@@ -9,7 +9,8 @@
 /coverage
 
 # production
-/build
+/.react-router/
+/build/
 
 # misc
 .DS_Store

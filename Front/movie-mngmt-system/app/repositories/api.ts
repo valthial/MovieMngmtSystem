@@ -1,5 +1,5 @@
 import axios from "axios"
-import type { MovieDto } from "~/models/movie";
+import type { MovieDto } from "~/domain/movie";
 
 export const getMovieById = async (id: string) => {
   try {
@@ -28,7 +28,7 @@ export const getMovies = async () => {
       data,
       status,
       statusText,
-    } = await axios.get<MovieDto[]>(`/api/movies/getAll`);
+    } = await axios.get<MovieDto[]>(`/api/movies`);
 
     if (status < 200 || status >= 300) {
       console.error("[getMovies]: Failed with status", status, statusText);
@@ -36,8 +36,7 @@ export const getMovies = async () => {
     }
 
     return data;
-  }
-  catch (e) {
+  } catch (e) {
     console.error("[getMovies]: Failed with error message", (e as Error).message)
     return null;
   }

@@ -21,3 +21,11 @@ services:
       - ./.containers/moviemngmtsystem-db:/var/lib/postgresql/data
     ports:
       - "5431:5432"
+  moviemngmtsystem.front:
+    image: ${DOCKER_REGISTRY-}moviemngmtsystemfront
+    build:
+      context: .
+      dockerfile: Front/movie-mngmt-system/Dockerfile
+    ports:
+      - "5000:5000"
+      - "5001:5001"
