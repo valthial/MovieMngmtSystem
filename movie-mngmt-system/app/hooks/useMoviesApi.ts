@@ -3,7 +3,6 @@ import { useState } from "react";
 
 export const useMoviesApi = () => {
     const [isExecuting, setIsExecuting] = useState<boolean>(false);
-    const API_BASE_URL = import.meta.env.VITE_API_URL;
     const addMovie = async (formData: FormData) => {
         try {
             setIsExecuting(true);
@@ -11,9 +10,12 @@ export const useMoviesApi = () => {
                 data,
                 status,
                 statusText
-            } = await axios.postForm(`${API_BASE_URL}/api/movie/create`,
+            } = await axios.post(`http://localhost:5000/api/movies/create`,
                 formData,
                 {
+                    headers: {
+                        'Content-Type': 'application/json', // Set the correct Content-Type
+                    },
                     timeout: 3000
                 });
 
@@ -36,7 +38,7 @@ export const useMoviesApi = () => {
                 data,
                 status,
                 statusText
-            } = await axios.delete<boolean>(`/api/movie/${id}`);
+            } = await axios.delete<boolean>(`http://localhost:5000/api/movies/${id}`);
 
             if (status < 200 || status >= 300) {
                 console.error("Error while creating a movie", statusText);

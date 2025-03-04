@@ -28,13 +28,49 @@
     <TypeScriptCompile Include="Front\movie-mngmt-system\app\providers\providers.tsx" />
     <TypeScriptCompile Include="Front\movie-mngmt-system\app\root.tsx" />
     <TypeScriptCompile Include="Front\movie-mngmt-system\react-router.config.ts" />
+    <TypeScriptCompile Include="Front\movie-mngmt-system\vite.config.ts" />
+    <TypeScriptCompile Include="movie-mngmt-system\.react-router\types\+register.ts" />
+    <TypeScriptCompile Include="movie-mngmt-system\.react-router\types\app\+types\root.ts" />
+    <TypeScriptCompile Include="movie-mngmt-system\.react-router\types\app\routes\+types\movie.$id.ts" />
+    <TypeScriptCompile Include="movie-mngmt-system\.react-router\types\app\routes\+types\movie.add.ts" />
+    <TypeScriptCompile Include="movie-mngmt-system\.react-router\types\app\routes\+types\_index.ts" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\components\header\header.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\components\link-button.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\components\loaders\movies-loader.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\components\pages\add-page.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\components\pages\index-page.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\components\pages\movie-details-page.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\components\tables\movies-table.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\entry.client.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\entry.server.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\hooks\useMoviesApi.ts" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\layout.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\models\movie.ts" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\providers\providers.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\repositories\api.ts" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\root.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\routes.ts" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\routes\movie.$id.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\routes\movie.add.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\app\routes\_index.tsx" />
+    <TypeScriptCompile Include="movie-mngmt-system\react-router.config.ts" />
+    <TypeScriptCompile Include="movie-mngmt-system\vite.config.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Front\movie-mngmt-system\.dockerignore" />
     <Content Include="Front\movie-mngmt-system\.env.local" />
     <Content Include="Front\movie-mngmt-system\.gitattributes" />
     <Content Include="Front\movie-mngmt-system\Dockerfile" />
+    <Content Include="Front\movie-mngmt-system\package.json" />
     <Content Include="Front\movie-mngmt-system\pnpm-lock.yaml" />
     <Content Include="Front\movie-mngmt-system\README.md" />
+    <Content Include="Front\movie-mngmt-system\tsconfig.json" />
+    <Content Include="movie-mngmt-system\.dockerignore" />
+    <Content Include="movie-mngmt-system\.env.local" />
+    <Content Include="movie-mngmt-system\app\app.css" />
+    <Content Include="movie-mngmt-system\Dockerfile" />
+    <Content Include="movie-mngmt-system\package.json" />
+    <Content Include="movie-mngmt-system\README.md" />
+    <Content Include="movie-mngmt-system\tsconfig.json" />
   </ItemGroup>
 </Project>

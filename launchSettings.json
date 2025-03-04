@@ -1,5 +1,13 @@
 {
   "profiles": {
+    "MovieMngmtSystem.Api": {
+    "commandName": "Project",
+    "dotnetRunMessages": true,
+    "applicationUrl": "http://localhost:5000;https://localhost:5001",
+    "environmentVariables": {
+      "ASPNETCORE_ENVIRONMENT": "Development"
+    }
+  },
     "Docker Compose": {
       "commandName": "DockerCompose",
       "commandVersion": "1.0",

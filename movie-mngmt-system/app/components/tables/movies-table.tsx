@@ -31,16 +31,28 @@ export const MoviesTable = (
                 dataIndex: 'id',
             },
             {
-                title: "User Id",
-                dataIndex: 'userId',
-            },
-            {
                 title: "Title",
                 dataIndex: 'title',
             },
             {
-                title: "Body",
-                dataIndex: 'body',
+                title: "Description",
+                dataIndex: 'description',
+            },
+            {
+                title: "Release Date",
+                dataIndex: 'releaseDate',
+            },
+            {
+                title: "Image Url",
+                dataIndex: 'imageUrl',
+            },
+            {
+                title: "Rating",
+                dataIndex: 'rating',
+            },
+            {
+                title: "Trailer Url",
+                dataIndex: 'trailerUrl',
             },
             {
                 title: "",

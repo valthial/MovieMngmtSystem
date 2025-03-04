@@ -1,7 +1,7 @@
 import React from 'react'
-import { getMovieById, getPostById } from '~/repositories/api'
+import { getMovieById } from '~/repositories/api'
 import { MovieDetailsPage } from '~/components/pages/movie-details-page'
-import type { MovieDto } from '~/domain/movie'
+import type { MovieDto } from '~/models/movie'
 import type { Route } from './+types/movie.$id'
 
 export async function clientLoader({

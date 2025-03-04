@@ -1,13 +1,14 @@
 import axios from "axios"
-import type { MovieDto } from "~/domain/movie";
+import type { MovieDto } from "~/models/movie";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 export const getMovieById = async (id: string) => {
   try {
     const {
       data,
       status,
       statusText,
-    } = await axios.get<MovieDto>(`/api/movie/${id}`);
+    } = await axios.get<MovieDto>(`http://localhost:5000/api/movies/${id}`);
 
     if (status < 200 || status >= 300) {
       console.error("[getMovieById]: Failed with status", status, statusText);
@@ -28,7 +29,7 @@ export const getMovies = async () => {
       data,
       status,
       statusText,
-    } = await axios.get<MovieDto[]>(`/api/movies`);
+    } = await axios.get<MovieDto[]>(`http://localhost:5000/api/movies/getAll`);
 
     if (status < 200 || status >= 300) {
       console.error("[getMovies]: Failed with status", status, statusText);

@@ -21,7 +21,12 @@ export const AddPage = () => {
                     const valuesArray = Object.entries(values);
 
                     for (const value of valuesArray) {
-                        formData.append(value[0], !!value[1] ? String(value[1]) : "");
+                        if (value[0] === 'releaseDate' && value[1] instanceof Date) {
+                            // Convert Date to ISO string
+                            formData.append(value[0], (value[1] as Date).toISOString());
+                        } else {
+                            formData.append(value[0], !!value[1] ? String(value[1]) : "");
+                        }
                     }
 
                     await addMovie(formData);

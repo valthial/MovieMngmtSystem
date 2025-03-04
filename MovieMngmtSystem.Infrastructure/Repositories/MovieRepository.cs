@@ -20,7 +20,7 @@ public class MovieRepository(ApplicationDbContext context) : IMovieRepository
 
     public async Task<IEnumerable<Movie?>> GetAllMoviesAsync()
     {
-        return await context.Movies.ToListAsync();
+        return context.Movies.FromSqlRaw("SELECT * FROM \"Movies\"").ToList();
     }
     public async Task UpdateMovieAsync(Movie movie)
     {

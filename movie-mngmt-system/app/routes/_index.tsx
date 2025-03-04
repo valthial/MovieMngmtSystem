@@ -1,7 +1,7 @@
 import { IndexPage } from "~/components/pages/index-page.js";
 import type { Route } from "./+types/_index";
 import { getMovies } from "~/repositories/api";
-import type { MovieDto } from "~/models/post";
+import type { MovieDto } from "~/models/movie";
 import { MovieLoader } from "~/components/loaders/movies-loader";
 
 export async function clientLoader({ }: Route.ClientLoaderArgs) {

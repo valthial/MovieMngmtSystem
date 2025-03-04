@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MovieMngmtSystem.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class AddMoviesTable : Migration
+    public partial class ModifyDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,7 +23,9 @@ namespace MovieMngmtSystem.Infrastructure.Migrations
                     ReleaseDate = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
                     ImageUrl = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
                     Rating = table.Column<decimal>(type: "numeric(3,1)", nullable: false),
-                    TrailerUrl = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false)
+                    TrailerUrl = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
+                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false),
+                    DeletedAt = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
